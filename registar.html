@@ -1,0 +1,53 @@
+<html>
+<title>Registration Form</title>
+<Style>
+	h1{
+		font-style:bold;
+		font-size:200%;
+		color:#6600CC;
+	}
+
+</style>
+<body background="judiciaryinformationsystem.jpg">
+<br/><br/><br/><br/><br/><br/><br/>
+<center><h1>Registration Form</h1></center>
+<form name="login">
+<center>
+	Username
+	<input type="text" name="username"><br/>
+	<br/>
+	Password
+	<input type="password" name="password" ><br/>
+	<br/>
+	Conform Password
+	<input type="password" name="conformpassword"><br/>
+	<br/>
+	<a href="login.html"><input type="button" value="Registar" onClick=" return validationform()"></a>
+</center>
+</form>
+<script>
+	function validationform()
+	{
+		var name= document.login.username.value;
+		var password=document.login.password.value;
+		var conform=document.login.conformpassword.value;
+		if( name== null)
+		{
+			alert("name should not be empty");
+			return false;
+		}
+		if(password.length<6)
+		{
+			alert("password length should be atleast six characters");
+			return false;
+		}
+		if(password!=conform)
+		{	
+			alert("conformation password is wrong");
+		}
+		else
+			return true;
+	}	
+</script>
+</body>
+</html>

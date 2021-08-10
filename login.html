@@ -1,0 +1,61 @@
+<html>
+<title>Login Page</title>
+<Style>
+	h1{
+		font-style:bold;
+		font-size:200%;
+		color:#6600CC;
+	}
+
+</style>
+<body background="judiciaryinformationsystem.jpg">
+<br/><br/><br/><br/><br/><br/><br/>
+<center><h1>Login Account</h1></center>
+<form name="login">
+<center>
+Select Type
+<select name=" Type of User  ">
+		<option value ="registrar">registrar</option>
+		<option value="lawyer">Lawyer</option>
+		<option value="judge">Judge</option>
+	</select><br/>	
+Username
+<input type="text" name="username"><br/>
+<br/>
+Password
+<input type="password" name="password" ><br/>
+<br/>
+<a href="usermanagement.html"><input type="button" value="Login" onClick="return validationform()"></a>
+</center>
+</form>
+<script>
+	function validationform()
+	{
+		var name= document.login.username.value;
+		var password=document.login.password.value;
+		if( name== null)
+		{
+			alert("name should not be empty");
+			return false;
+		}
+		if(name!="hemalatha")
+		{
+			alert("enter valid Username");
+			return false;
+		}
+		if(password !="hemalatha")
+		{
+			alert("Enter valid password");
+			return false;
+		}
+		if(password.length<6)
+		{
+			alert("password length should be atleast six characters");
+			return false;
+		}
+		else
+			return true;
+	}	
+</script>
+</body>
+</html>
